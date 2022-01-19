@@ -1,4 +1,18 @@
-# Basic Sample Hardhat Project
+<p align="center" width="200">
+   <img align="center" width="100" src="https://raw.githubusercontent.com/BraianVaylet/epic-nfts/main/screenshot/woodpecker.png" />   
+</p>
+
+# 🐦 Epic NFTs [SmartContract]
+
+### **[VER CONTRATO]()**
+
+### Características del proyecto.
+
+...
+
+---
+
+### Basic Sample Hardhat Project
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
