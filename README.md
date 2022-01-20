@@ -1,5 +1,5 @@
 <p align="center" width="200">
-   <img align="center" width="100" src="https://raw.githubusercontent.com/BraianVaylet/epic-nfts/main/screenshot/woodpecker.png" />   
+   <img align="center" width="100" src="https://raw.githubusercontent.com/BraianVaylet/epic-nfts/main/screenshot/dragon.png" />   
 </p>
 
 # 🐲 Epic NFTs [SmartContract]
