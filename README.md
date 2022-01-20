@@ -2,7 +2,7 @@
    <img align="center" width="100" src="https://raw.githubusercontent.com/BraianVaylet/epic-nfts/main/screenshot/woodpecker.png" />   
 </p>
 
-# 🐲 Epic NFTs [SmartContract]
+# 🐲🐉 Epic NFTs [SmartContract]
 
 ### **[VER CONTRATO]()**
 
