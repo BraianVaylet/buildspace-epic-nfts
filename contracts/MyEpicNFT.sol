@@ -463,7 +463,7 @@ contract MyEpicNFT is ERC721URIStorage {
 
     //> Creamos eventos para consumirlos desde el FE.
     event NewEpicNFTMinted(address sender, uint256 tokenId);
-    event getTotalNFTsMintedSoFar();
+    event getTotalNFTsMintedSoFar(uint256 maxSupply, uint256 currentSupply);
 
     //> Es necesario pasar el nombre de nuestro token NFTs y su símbolo.
     constructor() ERC721("SquareNFT", "SQUARE") {
@@ -599,6 +599,6 @@ contract MyEpicNFT is ERC721URIStorage {
 
         // Ejecutamos eventos.
         emit NewEpicNFTMinted(msg.sender, newItemId);
-        emit getTotalNFTsMintedSoFar();
+        emit getTotalNFTsMintedSoFar(maxSupply, _tokenIds.current());
     }
 }

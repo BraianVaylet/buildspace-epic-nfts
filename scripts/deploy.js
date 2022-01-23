@@ -28,3 +28,4 @@ runMain();
 // 4.deploy: 0xCf1c353B4c2C43b1b293850Dd445f171b42A1f29 (add json metadata, base64 librarie, arrays of words)
 // 5.deploy: 0x489670A14743d0d51a61ee285C6B31936f25C751 (add event)
 // 6.deploy: 0xCbBD5CF0BA4E464a6885a4160864B20F185c135f (add maxSupply)
+// 7.deploy: 0x858a2c0D6Ae323efE9Fa06727EF57192Aff72f15 (fix event maxSupply)
