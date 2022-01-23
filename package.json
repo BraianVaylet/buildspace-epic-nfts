@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "sc:deploy": "npx hardhat run scripts/deploy.js --network rinkeby",
+    "sc:run": "npx hardhat run scripts/run.js"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-waffle": "^2.0.2",

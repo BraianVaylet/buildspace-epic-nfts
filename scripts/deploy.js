@@ -26,3 +26,5 @@ runMain();
 // 2.deploy: 0x709E015a452ceACF06558FA803eF5Df3e0b89803
 // 3.deploy: 0x794c5e9BAf8E35b86Dc118D7beAb0a9F20074452 (new NFT codificado a base64)
 // 4.deploy: 0xCf1c353B4c2C43b1b293850Dd445f171b42A1f29 (add json metadata, base64 librarie, arrays of words)
+// 5.deploy: 0x489670A14743d0d51a61ee285C6B31936f25C751 (add event)
+// 6.deploy: 0xCbBD5CF0BA4E464a6885a4160864B20F185c135f (add maxSupply)

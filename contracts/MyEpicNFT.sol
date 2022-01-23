@@ -17,11 +17,13 @@ contract MyEpicNFT is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
+    uint256 public maxSupply = 50; // Para limitar el numero de nfts que puedo crear.
+
     //> Este es nuestro código SVG.
     // Lo unico que necesitamos cambiar es la palabra que se muestra, lo demás se queda igual.
     // Creamos una variable baseSvg para que todos nuestros NFT pueden usar.
     string baseSvg =
-        "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: console; font-size: 24px; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>";
+        "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: console; font-size: 24px; font-style: italic; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>";
 
     //> Creo tres matrices de palabras aleatorias.
     string[] firstWords = [
@@ -459,6 +461,10 @@ contract MyEpicNFT is ERC721URIStorage {
         "Atrevido"
     ];
 
+    //> Creamos eventos para consumirlos desde el FE.
+    event NewEpicNFTMinted(address sender, uint256 tokenId);
+    event getTotalNFTsMintedSoFar();
+
     //> Es necesario pasar el nombre de nuestro token NFTs y su símbolo.
     constructor() ERC721("SquareNFT", "SQUARE") {
         console.log("This is my NFT contract. Woah!");
@@ -514,6 +520,9 @@ contract MyEpicNFT is ERC721URIStorage {
         // _tokenIds: identificador único de nuestros NFT
         // es una variable de estado asi que el valor se almacena directamente en el contrato.
         uint256 newItemId = _tokenIds.current();
+
+        //> Agrego validacion para que no se supere el max de nfts.
+        require(_tokenIds.current() < maxSupply, "No NFTs left :(");
 
         //> Tomamos 3 palabras random de los arrays.
         string memory first = pickRandomFirstWord(newItemId);
@@ -583,5 +592,13 @@ contract MyEpicNFT is ERC721URIStorage {
             newItemId,
             msg.sender
         );
+
+        // console.log("current", _tokenIds);
+        console.log("Total-NFTs:", _tokenIds.current());
+        console.log("maxSupply", maxSupply);
+
+        // Ejecutamos eventos.
+        emit NewEpicNFTMinted(msg.sender, newItemId);
+        emit getTotalNFTsMintedSoFar();
     }
 }
