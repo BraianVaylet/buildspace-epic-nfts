@@ -23,7 +23,7 @@ contract MyEpicNFT is ERC721URIStorage {
     // Lo unico que necesitamos cambiar es la palabra que se muestra, lo demás se queda igual.
     // Creamos una variable baseSvg para que todos nuestros NFT pueden usar.
     string baseSvg =
-        "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: console; font-size: 24px; font-style: italic; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>";
+        "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: lime; font-family: console; font-size: 20px; font-style: italic; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>";
 
     //> Creo tres matrices de palabras aleatorias.
     string[] firstWords = [
@@ -522,7 +522,7 @@ contract MyEpicNFT is ERC721URIStorage {
         uint256 newItemId = _tokenIds.current();
 
         //> Agrego validacion para que no se supere el max de nfts.
-        require(_tokenIds.current() < maxSupply, "No NFTs left :(");
+        require(newItemId < maxSupply, "No NFTs left :(");
 
         //> Tomamos 3 palabras random de los arrays.
         string memory first = pickRandomFirstWord(newItemId);
@@ -594,11 +594,17 @@ contract MyEpicNFT is ERC721URIStorage {
         );
 
         // console.log("current", _tokenIds);
-        console.log("Total-NFTs:", _tokenIds.current());
+        console.log("Total-NFTs:", newItemId);
         console.log("maxSupply", maxSupply);
 
         // Ejecutamos eventos.
         emit NewEpicNFTMinted(msg.sender, newItemId);
+        emit getTotalNFTsMintedSoFar(maxSupply, newItemId);
+    }
+
+    function getTotalNFT() public {
+        console.log("maxSupply", maxSupply);
+        console.log("_tokenIds.current()", _tokenIds.current());
         emit getTotalNFTsMintedSoFar(maxSupply, _tokenIds.current());
     }
 }

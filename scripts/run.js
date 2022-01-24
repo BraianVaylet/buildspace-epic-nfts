@@ -12,8 +12,16 @@ const main = async () => {
   let txn = await nftContract.makeAnEpicNFT()
   // Esperamos a que sea minada.
   await txn.wait()
-  // Minteamos otro NFT.
+    // Llamada a la funcion makeAnEpicNFT().
   txn = await nftContract.makeAnEpicNFT()
+  // Esperamos a que sea minada.
+  await txn.wait()
+  // Llamada a la funcion makeAnEpicNFT().
+  txn = await nftContract.makeAnEpicNFT()
+  // Esperamos a que sea minada.
+  await txn.wait()
+  // Minteamos otro NFT.
+  txn = await nftContract.getTotalNFT()
   // Esperamos a que sea minado.
   await txn.wait()
 };

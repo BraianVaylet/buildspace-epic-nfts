@@ -29,3 +29,4 @@ runMain();
 // 5.deploy: 0x489670A14743d0d51a61ee285C6B31936f25C751 (add event)
 // 6.deploy: 0xCbBD5CF0BA4E464a6885a4160864B20F185c135f (add maxSupply)
 // 7.deploy: 0x858a2c0D6Ae323efE9Fa06727EF57192Aff72f15 (fix event maxSupply)
+// 8.deploy: 0x907078DB4B60AaF602e974416cd86F92E3532852 (add function, change NFT letter color)
