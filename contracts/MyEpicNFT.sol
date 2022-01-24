@@ -559,26 +559,6 @@ contract MyEpicNFT is ERC721URIStorage {
             abi.encodePacked("data:application/json;base64,", json)
         );
 
-        //> SVG
-        console.log("\n--------------------");
-        console.log(finalSvg);
-        console.log("--------------------\n");
-        //> JSON con metadata
-        console.log("\n--------------------");
-        console.log(finalTokenUri);
-        console.log("--------------------\n");
-        //> Preview de nuestro NFT.
-        console.log("\n--------------------");
-        console.log(
-            string(
-                abi.encodePacked(
-                    "https://nftpreview.0xdev.codes/?code=",
-                    finalTokenUri
-                )
-            )
-        );
-        console.log("--------------------\n");
-
         //> Acuña el NFT al remitente usando msg.sender
         _safeMint(msg.sender, newItemId);
 
@@ -592,10 +572,6 @@ contract MyEpicNFT is ERC721URIStorage {
             newItemId,
             msg.sender
         );
-
-        // console.log("current", _tokenIds);
-        console.log("Total-NFTs:", newItemId);
-        console.log("maxSupply", maxSupply);
 
         // Ejecutamos eventos.
         emit NewEpicNFTMinted(msg.sender, newItemId);
