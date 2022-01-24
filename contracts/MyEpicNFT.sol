@@ -602,9 +602,11 @@ contract MyEpicNFT is ERC721URIStorage {
         emit getTotalNFTsMintedSoFar(maxSupply, newItemId);
     }
 
-    function getTotalNFT() public {
-        console.log("maxSupply", maxSupply);
-        console.log("_tokenIds.current()", _tokenIds.current());
-        emit getTotalNFTsMintedSoFar(maxSupply, _tokenIds.current());
+    function getCurrentTotalNFTs() public view returns (uint256) {
+        return _tokenIds.current();
+    }
+
+    function getTotalNFTs() public view returns (uint256) {
+        return maxSupply;
     }
 }
