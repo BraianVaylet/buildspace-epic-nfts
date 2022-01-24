@@ -4,11 +4,20 @@
 
 # 🐲 Epic NFTs [SmartContract]
 
-### **[VER CONTRATO]()**
+### **[VER CONTRATO](https://rinkeby.etherscan.io/address/0x9a59CFc34ABED8FDE5989892A1D2B75235d14b14)**
 
 ### Características del proyecto.
 
-...
+- Proyecto desarrollado para los cursos de la plataforma [buildspace](https://buildspace.so/).
+- Es un proyecto realizado en Solidity utilizando [HardHat](https://hardhat.org/) como framework.
+- Está deployado en la red de Rinkeby.
+- La dirección del contrato es: **0xef10AE1B845aEC9251c19cc5af7d4dda7424F52D**, pueden revisar el contrato en el siguiente Link: [rinkeby.etherscan](https://rinkeby.etherscan.io/address/0x9a59CFc34ABED8FDE5989892A1D2B75235d14b14)
+- Los usuarios deben conectarse usando MetaMask.
+- El contrato permite mintear uno de los 50 NFTs.
+- Los NFTs estan formados de una palabra generada por la combinacion aleatoria de otras 3, un animal, una profesion y una adjetivo.
+- Los NFTs podran ser vendidos y son accesibles desde OpenSea o Rarible.
+
+Puede ingresar a la aplicacion Web desde [aqui](https://epic-nfts-ui-ten.vercel.app/)
 
 ---
 
